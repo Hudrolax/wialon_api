@@ -46,7 +46,7 @@ if __name__ == '__main__':
 def search_coords_by_phrase(phrase: str) -> Addresses:
     wialon_api = Wialon()
     result_login = wialon_api.token_login(token=TOKEN)
-    result = wialon_api.gis_searchintelli(phrase, count=1)
+    result = wialon_api.gis_searchintelli(phrase, count=3)
     wialon_api.core_logout()
     addresses = Addresses()
     addresses.load(result)
